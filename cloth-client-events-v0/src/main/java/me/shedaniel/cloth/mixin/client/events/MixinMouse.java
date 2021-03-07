@@ -89,7 +89,8 @@ public class MixinMouse {
         }
     }
     
-    @SuppressWarnings("UnresolvedMixinReference")
+    // FIXME 1.17
+    /*@SuppressWarnings("UnresolvedMixinReference")
     @Inject(method = "method_1602", at = @At("HEAD"), cancellable = true)
     public void onMouseDragged(Element element, double d, double e, double f, double g, CallbackInfo info) {
         if (!info.isCancelled()) {
@@ -97,5 +98,5 @@ public class MixinMouse {
             if (result != ActionResult.PASS)
                 info.cancel();
         }
-    }
+    }*/
 }

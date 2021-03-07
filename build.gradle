@@ -63,7 +63,10 @@ allprojects {
     }
 
     repositories {
-        maven { url "https://dl.bintray.com/shedaniel/legacy-yarn-updated" }
+        maven {
+            name = 'Fabric'
+            url = 'https://maven.fabricmc.net/'
+        }
         mavenLocal()
     }
 

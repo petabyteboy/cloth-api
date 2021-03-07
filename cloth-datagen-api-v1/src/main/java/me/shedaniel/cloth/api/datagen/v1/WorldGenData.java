@@ -31,7 +31,6 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.dimension.DimensionType;
-import net.minecraft.world.gen.carver.CarverConfig;
 import net.minecraft.world.gen.carver.ConfiguredCarver;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.surfacebuilder.ConfiguredSurfaceBuilder;
@@ -46,7 +45,7 @@ public interface WorldGenData extends SimpleData {
         addCodec("data/" + key.getNamespace() + "/" + Registry.CONFIGURED_FEATURE_WORLDGEN.getValue().getPath() + "/" + key.getPath() + ".json", ConfiguredStructureFeature.CODEC, feature);
     }
     
-    default <WC extends CarverConfig> void addCarver(Identifier key, ConfiguredCarver<WC> carver) {
+    default <WC extends net.minecraft.class_5871> void addCarver(Identifier key, ConfiguredCarver<WC> carver) {
         addCodec("data/" + key.getNamespace() + "/" + Registry.CONFIGURED_CARVER_WORLDGEN.getValue().getPath() + "/" + key.getPath() + ".json", ConfiguredCarver.CODEC, carver);
     }
     
